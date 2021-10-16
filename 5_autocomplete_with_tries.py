@@ -47,16 +47,18 @@ wordList = [
 for word in wordList:
     MyTrie.insert(word)
 
-from ipywidgets import widgets
-from IPython.display import display
-from ipywidgets import interact
-def f(prefix):
-    if prefix != '':
-        prefixNode = MyTrie.find(prefix)
-        if prefixNode:
-            print('\n'.join(prefixNode.suffixes()))
-        else:
-            print(prefix + " not found")
-    else:
-        print('')
-interact(f,prefix='')
+print(MyTrie.suffixes('f'))
+
+# from ipywidgets import widgets
+# from IPython.display import display
+# from ipywidgets import interact
+# def f(prefix):
+#     if prefix != '':
+#         prefixNode = MyTrie.find(prefix)
+#         if prefixNode:
+#             print('\n'.join(prefixNode.suffixes()))
+#         else:
+#             print(prefix + " not found")
+#     else:
+#         print('')
+# interact(f,prefix='')
