@@ -6,8 +6,12 @@ Trie is used because it is a very efficient way of storing strings that have som
 
 ## time complexity
 
-The insert and search takes `O(n)` where n is the length of the key.
+The insert function takes `O(n)` where n is the length of the word.
+
+Find method of Trie takes `O(n)` where n is the length of the key.
+
+Suffixes method takes `O(n)` where n is the number of children in the node.
 
 ## space complexity
 
-The space complexity is `O(akn)` where a is the size of each alphabet, k is the length of the key and n is the number of the key.
+The space complexity is `O(kn)` where `k` is the length of the key and `n` is the number of the key.
