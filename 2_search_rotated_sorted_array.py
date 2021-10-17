@@ -60,6 +60,10 @@ def rotated_array_search(input_list, number):
         return -1
     return search_recursive(input_list, number, 0, len(input_list)-1)
 
+
+
+
+### TEST CASES ###
 def linear_search(input_list, number):
     for index, element in enumerate(input_list):
         if element == number:
@@ -74,8 +78,15 @@ def test_function(test_case):
     else:
         print("Fail")
 
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 8])
-test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+# Case 1
+test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6]) # prints "Pass"
+test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1]) # prints "Pass"
+test_function([[6, 7, 8, 1, 2, 3, 4], 8]) # prints "Pass"
+test_function([[6, 7, 8, 1, 2, 3, 4], 1]) # prints "Pass"
+test_function([[6, 7, 8, 1, 2, 3, 4], 10]) # prints "Pass"
+
+# Case 2
+test_function([[1], 1]) # prints "Pass"
+
+# Case 3
+test_function([[], 1]) # prints "Pass"
