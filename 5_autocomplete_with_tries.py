@@ -9,34 +9,60 @@ For example, if our Trie contains the words `["fun", "function", "factory"]` and
 expect to receive `["un", "unction", "actory"]` back from `node.suffixes()`
 """
 
+## Represents a single node in the Trie
 class TrieNode:
     def __init__(self):
         ## Initialize this node in the Trie
-        pass
-    
-    def insert(self, char):
-        ## Add a child node in this Trie
-        pass
+        self.is_word = False
+        self.children = {}
         
-    def suffixes(self, suffix = ''):
-        ## Recursive function that collects the suffix for 
-        ## all complete words below this point
-        pass
-
 ## The Trie itself containing the root node and insert/find functions
 class Trie:
     def __init__(self):
         ## Initialize this Trie (add a root node)
-        pass
+        self.root = TrieNode()
 
     def insert(self, word):
         ## Add a word to the Trie
-        pass
+        current_node = self.root
+        
+        for char in word:
+            if char not in current_node.children:
+                current_node.children[char] = TrieNode()
+            current_node = current_node.children[char]
+            
+        current_node.is_word = True
 
     def find(self, prefix):
         ## Find the Trie node that represents this prefix
-        pass
+        current_node = self.root
 
+        for char in prefix:
+            if char not in current_node.children:
+                return None
+            current_node = current_node.children[char]
+        
+        return current_node
+
+
+    def suffixes(self, suffix = ''):
+        arr = []
+        self._suffixes_recursion(suffix, arr)
+        return arr
+
+    def _suffixes_recursion(self, suffix, arr, chars=''):
+        node = self.find(suffix)
+
+        if node is None:
+            return []
+        
+        for char in node.children:
+            if self.find(suffix+char).is_word:
+                arr.append(chars+char)
+            self._suffixes_recursion(suffix+char, arr, chars=chars+char)
+
+
+### TEST CASES ###
 
 MyTrie = Trie()
 wordList = [
@@ -47,18 +73,18 @@ wordList = [
 for word in wordList:
     MyTrie.insert(word)
 
-print(MyTrie.suffixes('f'))
+# Case 1
+print(MyTrie.suffixes("")) 
+# Output: ['ant', 'anthology', 'antagonist', 'antonym', 'fun', 'function', 'factory', 'trie', 'trigger', 'trigonometry', 'tripod']
 
-# from ipywidgets import widgets
-# from IPython.display import display
-# from ipywidgets import interact
-# def f(prefix):
-#     if prefix != '':
-#         prefixNode = MyTrie.find(prefix)
-#         if prefixNode:
-#             print('\n'.join(prefixNode.suffixes()))
-#         else:
-#             print(prefix + " not found")
-#     else:
-#         print('')
-# interact(f,prefix='')
+# Case 2
+print(MyTrie.suffixes("asdfasdf")) 
+# Output: []
+
+# Case 3
+print(MyTrie.suffixes("fu"))
+# Output: ['n', 'nction']
+
+# Case 4
+print(MyTrie.suffixes("ant"))
+# Output: ['hology', 'agonist', 'onym']
