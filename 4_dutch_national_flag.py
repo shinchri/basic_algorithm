@@ -15,17 +15,24 @@ def sort_012(input_list):
     Args:
        input_list(list): List to be sorted
     """
-    num_0 = []
-    num_1 = []
-    num_2 = []
-    for index,element in enumerate(input_list):
-        if element == 0:
-            num_0.append(element)
-        elif element == 1:
-            num_1.append(element)
+    
+    lo = 0
+    hi = len(input_list) -1
+    mid = 0
+
+    while mid <= hi:
+        if input_list[mid] == 0:
+            input_list[lo], input_list[mid] = input_list[mid], input_list[lo]
+            lo = lo + 1
+            mid = mid+1
+        elif input_list[mid] == 1:
+            mid = mid + 1
         else:
-            num_2.append(element)
-    return num_0 + num_1 + num_2
+            input_list[mid], input_list[hi] = input_list[hi], input_list[mid]
+            hi = hi - 1
+    
+    return input_list
+    
 
 ### TEST CASES ###
 def test_function(test_case):
