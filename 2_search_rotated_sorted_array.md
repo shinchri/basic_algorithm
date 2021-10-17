@@ -11,4 +11,4 @@ the mid value from the input.
 
 ## space complexity
 
-The space complexity is `O(n^2)`. This is because the input is an array, and there are recursive functions.
+The space complexity is `O(1)`.

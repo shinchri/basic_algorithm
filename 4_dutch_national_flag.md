@@ -10,4 +10,4 @@ Since it makes a single traversal, the run time is `O(n)`.
 
 ## space complexity
 
-The space complexity is `O(n)` for input list.
+The space complexity is `O(1)` for input list.

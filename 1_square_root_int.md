@@ -12,4 +12,4 @@ Time complexity is `O(log(n))`.
 
 ## space complexity
 
-Space complexity is `O(n)` since it is a recursive function.
+Space complexity is `O(1)`.

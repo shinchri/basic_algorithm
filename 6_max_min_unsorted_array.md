@@ -10,4 +10,4 @@ The time complexity is `O(n)` since it makes a single traversal of the input arr
 
 ## space complexity
 
-The space complexity is `O(n)`, from the input array.
+The space complexity is `O(1)`.
