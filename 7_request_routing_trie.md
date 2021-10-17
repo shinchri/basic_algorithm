@@ -20,4 +20,8 @@ Trie is used because it is an efficient way to store a set of strings that have 
 
 ## space complexity
 
-The space complexity of Route is `O(kn)` where `k` is the length of the key, and `n` is the number of the keys.
+RouteTrieNode class takes `O(1)` space.
+
+RouteTrie class takes `O(kn)` where `k` is the length of the key, and `n` is the number of the keys.
+
+The space complexity of Route class is `O(kn)` where `k` is the length of the key, and `n` is the number of the keys.
