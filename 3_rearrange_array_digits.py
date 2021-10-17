@@ -81,6 +81,8 @@ def rearrange_digits(input_list):
     
     return [int(num_1), int(num_2)]
 
+
+### TEST CASES ###
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
     solution = test_case[1]
@@ -88,14 +90,17 @@ def test_function(test_case):
         print("Pass")
     else:
         print("Fail")
-        
-test_function([[1, 2, 3, 4, 5], [542, 31]])
+
+# Case 1   
+test_function([[1, 2, 3, 4, 5], [542, 31]]) # prints "Pass"
 
 test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
-test_function(test_case)
+test_function(test_case) # prints "Pass"
 
+# Case 2
 test_case = [[], []]
-test_function(test_case)
+test_function(test_case) # prints "Pass"
 
+# Case 3
 test_case = [[1], [1]]
-test_function(test_case)
+test_function(test_case) # prints "Pass"
