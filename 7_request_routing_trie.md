@@ -20,8 +20,13 @@ Trie is used because it is an efficient way to store a set of strings that have 
 
 ## space complexity
 
-RouteTrieNode class takes `O(1)` space.
+### RouteTrieNode class
+- insert method takes `O(1)` for simply inserting node.
 
-RouteTrie class takes `O(kn)` where `k` is the length of the key, and `n` is the number of the keys.
+### RouteTrie class
+- insert method takes `O(n)` where n is the length of the path list.
+- find method takes `O(1)` since it does not take up any additional space. 
 
-The space complexity of Route class is `O(kn)` where `k` is the length of the key, and `n` is the number of the keys.
+### Router Class:
+- split_path method takes `O(n)` where n is the length of the path list.
+- lookup method takes `O(1)` since it does not take additional space.
