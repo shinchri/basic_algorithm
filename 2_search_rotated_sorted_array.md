@@ -11,4 +11,4 @@ the mid value from the input.
 
 ## space complexity
 
-The space complexity is `O(1)`.
+The space complexity is `O(1)`. This is because the memory used does not depend on the input size.
