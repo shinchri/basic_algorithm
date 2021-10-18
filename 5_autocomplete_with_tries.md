@@ -14,4 +14,8 @@ Suffixes method takes `O(n)` where n is the number of children in the node.
 
 ## space complexity
 
-The space complexity is `O(kn)` where `k` is the length of the key and `n` is the number of the key.
+The insert function takes `O(kn)` where `k` is the length of the key and `n` is the number of the key.
+
+Find method of Trie takes `O(1)` since it does not need additional space.
+
+The suffixes method takes `O(n)` where `n` is the number of suffixes.
