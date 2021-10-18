@@ -10,4 +10,4 @@ The time complexity is `O(n)` since it makes a single traversal of the input arr
 
 ## space complexity
 
-The space complexity is `O(1)`.
+The space complexity is `O(1)`. This is because the memory used in the `get_max_min` method stays same regardless of what the input size is. The memory taken by the variables declared stay constant.
