@@ -10,4 +10,4 @@ Since it makes a single traversal, the run time is `O(n)`.
 
 ## space complexity
 
-The space complexity is `O(1)` for input list.
+The space complexity is `O(1)` since the memory taken by the sort_012 function does not depend on the input size. The input list is used as is, and no other list is created.
