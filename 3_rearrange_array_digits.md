@@ -10,4 +10,4 @@ The time complexity is `O(nlog(n))`. This is due to the run time of the heapsort
 
 ## space complexity
 
-The space complexity is `O(n)` from the sorted list.
+The space complexity is `O(n)` from the sorted list. The sorted list created by method `heapsort()` and it contains same number of element as the input list but in increasing order. The memory used increases linearly as the input size increases.

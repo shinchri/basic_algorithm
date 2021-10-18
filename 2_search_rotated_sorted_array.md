@@ -6,7 +6,7 @@ Recursion is used because the sub-problems are similar to the initial problem.
 
 ## time complexity
 
-The time complexity is `O(long(n))`. This is reached by finding
+The time complexity is `O(log(n))`. This is reached by finding
 the mid value from the input.
 
 ## space complexity
