@@ -12,4 +12,4 @@ Time complexity is `O(log(n))`.
 
 ## space complexity
 
-Space complexity is `O(1)`.
+Space complexity is `O(1)`. This is because all the variables take same number of spaces no matter what the input is.
